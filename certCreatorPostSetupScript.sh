@@ -41,7 +41,7 @@ fi
 
 sudo mkdir ~/tak-server/certs
 sudo docker cp $CONTAINER_ID:/opt/tak/certs/files/$TRUSTSTORE ~/tak-server/certs
-sudo docker cp $CONTAINER_ID:/opt/tak/certs/files/tc-*.p12 ~/tak-server/certs
+sudo docker cp $CONTAINER_ID:/opt/tak/certs/files/clients/ ~/tak-server/certs
 sudo chmod 777 ~/tak-server/certs/*
 
  echo "******************************************************************************"
