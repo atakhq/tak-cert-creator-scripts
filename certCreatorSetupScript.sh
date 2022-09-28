@@ -6,6 +6,8 @@ echo ""
 echo "This script will walk you through the creation of user certificates, including ITAK compatible datapacks."
 read -p "Press any key to being setup..."
 
+apt-get install zip
+
 cd /opt/tak/certs/
 mkdir /opt/tak/certs/files/clients
 
