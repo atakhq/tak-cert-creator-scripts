@@ -109,6 +109,10 @@ EOF
 
 cd /opt/tak/certs/files/clients/$CLIENT_NAME/
 zip itak.zip iphone.p12 server.p12 manifest.xml taky-server.pref
+rm iphone.p12 
+rm server.p12 
+rm manifest.xml 
+rm taky-server.pref
 
 done 
  
