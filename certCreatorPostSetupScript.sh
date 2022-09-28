@@ -5,7 +5,8 @@ echo "*** MAKE SURE YOU ARE RUNNING THIS FROM YOUR MACHINE, NOT INSIDE DOCKER CO
 echo ""
 echo "This script will tranfer over the cert files from inside the docker image to your machine so you can download and give to users"
 echo ""
-read -p "Press any key to being..."
+read -p "Press any key to begin..."
+echo ""
 
 #Figure out which truststore to use
 while true; do
