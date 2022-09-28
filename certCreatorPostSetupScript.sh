@@ -3,10 +3,18 @@
 echo ""
 echo "*** MAKE SURE YOU ARE RUNNING THIS FROM YOUR MACHINE, NOT INSIDE DOCKER CONTAINER!!!! ***"
 echo ""
-echo "This script will tranfer over the cert files from inside the docker image to your machine so you can download and give to users"
+echo "This script will reboot TAK Server to make our new user certs live,"
+exho "then downloading them so your distribute to users."
 echo ""
 read -p "Press any key to begin..."
 echo ""
+
+
+#Make our changes live
+cd ~/tak-server/
+docker-compose down
+service docker restart
+docker-compose up -d
 
 #Figure out which truststore to use
 while true; do
