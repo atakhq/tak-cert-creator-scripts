@@ -17,4 +17,5 @@ Clone this project into the docker container, make executable, run it
 
 `cd /tmp/ && git clone https://github.com/atakhq/tak-cert-creator-scripts.git && cd /tmp/tak-cert-creator-scripts/ && chmod +x * && ./certCreatorSetupScript.sh`
 
+Follow the instructions in the scripts.
 
