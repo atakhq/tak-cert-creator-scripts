@@ -8,6 +8,8 @@ read -p "Press any key to being setup..."
 
 cd /opt/tak/certs/
 
+mkdir /opt/tak/certs/clients
+
 #Make the Client Keys
 echo "How many clients do you want to configure?"
 read CLIENT_COUNT
@@ -25,6 +27,8 @@ do
     
     echo "Creating certs for $CLIENT_NAME"
     ./makeCert.sh client tc-$CLIENT_NAME
+    
+    cp tc-$CLIENT_NAME.p12 ./clients/
 
  done 
  
