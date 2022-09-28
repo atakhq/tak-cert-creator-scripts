@@ -72,19 +72,19 @@ do
     cp /opt/tak/certs/files/$TRUSTSTORE /opt/tak/certs/files/clients/$CLIENT_NAME
     mv /opt/tak/certs/files/clients/$CLIENT_NAME/$TRUSTSTORE /opt/tak/certs/files/clients/$CLIENT_NAME/server.p12
 
- tee /opt/tak/certs/files/clients/$CLIENT_NAME/manifest.xml >/dev/null << EOF
-    <MissionPackageManifest version="2">
-    <Configuration>
-    <Parameter name="uid" value="bcfaa4a5-2224-4095-bbe3-fdaa22a82741"/>
-    <Parameter name="name" value="testbox_DP"/>
-    <Parameter name="onReceiveDelete" value="true"/>
-    </Configuration>
-    <Contents>
-    <Content ignore="false" zipEntry="certs\taky-server.pref"/>
-    <Content ignore="false" zipEntry="certs\server.p12"/>
-    <Content ignore="false" zipEntry="certs\iphone.p12"/>
-    </Contents>
-    </MissionPackageManifest>
+tee /opt/tak/certs/files/clients/$CLIENT_NAME/manifest.xml >/dev/null << EOF
+<MissionPackageManifest version="2">
+<Configuration>
+<Parameter name="uid" value="bcfaa4a5-2224-4095-bbe3-fdaa22a82741"/>
+<Parameter name="name" value="testbox_DP"/>
+<Parameter name="onReceiveDelete" value="true"/>
+</Configuration>
+<Contents>
+<Content ignore="false" zipEntry="certs\taky-server.pref"/>
+<Content ignore="false" zipEntry="certs\server.p12"/>
+<Content ignore="false" zipEntry="certs\iphone.p12"/>
+</Contents>
+</MissionPackageManifest>
 EOF
 
 
