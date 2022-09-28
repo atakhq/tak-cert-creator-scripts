@@ -9,6 +9,8 @@ read -p "Press any key to being setup..."
 cd /opt/tak/certs/
 mkdir /opt/tak/certs/files/clients
 
+echo "What is the IP to your TAK Server?"
+read  PUB_SERVER_IP
 
 #Figure out which truststore to use
 while true; do
@@ -68,7 +70,7 @@ do
     cp /opt/tak/certs/files/$TRUSTSTORE /opt/tak/certs/files/clients/$CLIENT_NAME
     mv /opt/tak/certs/files/clients/$CLIENT_NAME/$TRUSTSTORE /opt/tak/certs/files/clients/$CLIENT_NAME/server.p12
 
-sudo tee /opt/tak/certs/files/clients/$CLIENT_NAME/manifest.xml >/dev/null << EOF
+ tee /opt/tak/certs/files/clients/$CLIENT_NAME/manifest.xml >/dev/null << EOF
     <MissionPackageManifest version="2">
     <Configuration>
     <Parameter name="uid" value="bcfaa4a5-2224-4095-bbe3-fdaa22a82741"/>
@@ -83,13 +85,8 @@ sudo tee /opt/tak/certs/files/clients/$CLIENT_NAME/manifest.xml >/dev/null << EO
     </MissionPackageManifest>
 EOF
 
-DEVICE_NAME=$(ip -o -4 route show to default | awk '{print $5}')
-#echo "FOUND DEVICE NAME: $DEVICE_NAME"
 
-PUB_SERVER_IP=$(ip addr show $DEVICE_NAME | awk 'NR==3{print substr($2,1,(length($2)-3))}')
-echo "SERVER IP FOR ITAK CONFIG USED: $PUB_SERVER_IP"
-
-sudo tee /opt/tak/certs/files/clients/$CLIENT_NAME/taky-server.pref >/dev/null << EOF
+tee /opt/tak/certs/files/clients/$CLIENT_NAME/taky-server.pref >/dev/null << EOF
 <?xml version='1.0' encoding='ASCII' standalone='yes'?>
 <preferences>
   <preference version="1" name="cot_streams">
