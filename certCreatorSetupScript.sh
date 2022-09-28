@@ -34,7 +34,7 @@ do
  echo ""
  echo "exit"
  echo ""
- echo "cd /tmp/tak-cert-enrollment-script/ && . certCreatorPostSetupScript.sh"
+ echo "cd /tmp/tak-cert-creator-scripts/ && . certCreatorPostSetupScript.sh"
  echo ""
  echo "******************************************************************************"
  echo "******************************************************************************"
