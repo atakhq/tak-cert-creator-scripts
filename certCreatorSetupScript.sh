@@ -27,4 +27,7 @@ do
  echo ""
  echo "exit"
  echo ""
- echo "cd /tmp/tak-cert-enrollment-script/ && chmod +x * && . certEnrollPostInstallScript.sh"
+ echo "cd /tmp/tak-cert-enrollment-script/ && . certCreatorPostSetupScript.sh"
+ echo ""
+ echo "******************************************************************************"
+ echo "******************************************************************************"
