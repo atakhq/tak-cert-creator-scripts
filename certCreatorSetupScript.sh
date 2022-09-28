@@ -28,7 +28,7 @@ do
     echo "Creating certs for $CLIENT_NAME"
     ./makeCert.sh client tc-$CLIENT_NAME
     
-    cp tc-$CLIENT_NAME.p12 ./clients/
+    cp ./files/tc-$CLIENT_NAME.p12 ./files/clients/
 
  done 
  
