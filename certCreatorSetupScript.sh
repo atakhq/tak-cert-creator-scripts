@@ -6,7 +6,7 @@ echo ""
 echo "This script will walk you through the creation of user certificates, including ITAK compatible datapacks."
 read -p "Press any key to being setup..."
 
-cd opt/tak/certs/
+cd /opt/tak/certs/
 
 #Make the Client Keys
 echo "How many clients do you want to configure?"
