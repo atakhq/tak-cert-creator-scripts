@@ -1,7 +1,7 @@
 # TAK Server User Cert Creation Helper
 Script package to help with the mass creation of user certificates in TAK server Docker install, including ITAK compatible package output.
 
-## More info Here: https://atakhq.com/en/tak-server/cert-enrollment
+## More info Here: https://atakhq.com/en/tak-server/cert-gen
 
 Login as TAK Superuser and clone this repo to your machine
 
