@@ -40,14 +40,16 @@ else
 fi
 
 sudo mkdir ~/tak-server/certs
-sudo docker cp $CONTAINER_ID:/opt/tak/certs/files/$TRUSTSTORE ~/tak-server/certs
 sudo docker cp $CONTAINER_ID:/opt/tak/certs/files/clients/ ~/tak-server/certs
-sudo chmod 777 ~/tak-server/certs/*
-
+sudo docker cp $CONTAINER_ID:/opt/tak/certs/files/$TRUSTSTORE ~/tak-server/certs/clients
+sudo chmod 777 -R ~/tak-server/certs/*
+cd ~/tak-server/certs/clients
+ls
  echo "******************************************************************************"
  echo "******************************************************************************"
  echo ""
- echo "All certs have been moved to ~/tak-server/certs/ you can now download them from there"
+ echo "All certs have been moved to ~/tak-server/certs/ you can now download them from there."
+ echo "They are listed above and you are currently in the directory containing all your user certs"
  echo ""
  echo "******************************************************************************"
  echo "******************************************************************************"
