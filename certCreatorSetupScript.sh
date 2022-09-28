@@ -1,6 +1,9 @@
 #!/bin/bash
 
-echo "YOU MUST RUN THIS FROM INSIDE YOUR TAK DOCKER CONTAINER!!!!"
+echo ""
+echo "*** YOU MUST RUN THIS FROM INSIDE YOUR TAK DOCKER CONTAINER!!!! ***"
+echo ""
+echo "This script will walk you through the creation of user certificates, including ITAK compatible datapacks."
 read -p "Press any key to being setup..."
 
 cd opt/tak/certs/
@@ -17,7 +20,7 @@ do
     read CLIENT_NAME
     
     echo "Creating certs for $CLIENT_NAME"
-    ./makeCert.sh client $CLIENT_NAME
+    ./makeCert.sh client tc-$CLIENT_NAME
 
  done 
  
