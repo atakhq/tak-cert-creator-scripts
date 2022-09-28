@@ -16,7 +16,11 @@ for ((i=1; i<=$CLIENT_COUNT;i++))
 
 do
     CLIENT_ARR+=($CLIENT_NAME)
+    echo ""
+    echo "************************************"
     echo "What is the username for client #$i?"
+    echo "************************************"
+    echo ""
     read CLIENT_NAME
     
     echo "Creating certs for $CLIENT_NAME"
